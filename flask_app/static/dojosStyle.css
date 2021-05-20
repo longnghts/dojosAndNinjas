@@ -1,0 +1,20 @@
+*{
+    font-family: sans-serif;
+}
+.mainContain{
+    display: flex;
+    justify-content: center;
+}
+.leftContain{
+    width: 400px;
+    height:1000px;
+}
+.rightContain{
+    width: 400px;
+    height: 1000px;
+}
+.rightBody{
+    width: 350px;
+    height: auto;
+     outline:2px solid black;
+}

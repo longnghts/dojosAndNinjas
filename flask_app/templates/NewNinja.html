@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>New Ninja</h1>
+    <br>
+    <br>
+    <form action="/addNinja" method="POST">
+        <label>Dojo:</label>
+        <select name="dojo_id">
+        {% for oneDojo in allDojos %}  
+        <option value = "{{oneDojo['id']}}">{{oneDojo['name']}}</option>
+        <br>
+        {% endfor %}
+    </select>
+    <p>First Name:<input type="text" name="first_name"></p>
+    <p>Last Name:<input type="text" name="last_name"></p>
+    <p>Age:<input type="text" name="age"></p>
+    <input type="submit" value="Create Ninja">
+</form>
+    <br>
+    <br>
+    <a href="/">Home</a>
+</body>
+</html>
